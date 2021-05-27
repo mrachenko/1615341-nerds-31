@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Александр Марченко](https://up.htmlacademy.ru/htmlcss/31/user/1615341).
-* Наставник: `Konstantin Sokolov`.
+* Наставник: [Konstantin Sokolov](https://htmlacademy.ru/profile/costigans).
 
 ---
 
