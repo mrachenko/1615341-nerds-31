@@ -29,6 +29,8 @@
 :root {
 
   --basic-extra-dark: #283136;
+  --basic-gray: #666666;
+  --basic-dark-gray: #444444;
   --basic-white: #ffffff;
   --basic-neutral: #eeeeee;
   --basic-black: #000000;
@@ -178,21 +180,31 @@ img {
   line-height: 30px;
   font-size: 24px;
   font-weight: 700;
+  color: var(--basic-black);
 }
 
 .about__header {
   font-size: 45px;
   line-height: 45px;
   font-weight: 500;
+  color: var(--basic-black);
 }
 
 .about__description--uppercase {
   text-transform: uppercase;
   font-weight: 700;
+  color: var(--basic-black);
 }
 
 .about__list {
   list-style: none;
+}
+
+.about__list-item span{
+  font-size: 45px;
+  line-height: 64px;
+  font-weight: 700;
+  color: var(--basic-black);
 }
 
 .partners__list-item {
@@ -211,16 +223,23 @@ img {
   font-weight: 700;
   font-size: 18px;
   line-height: 30px;
+  color: var(--basic-black);
 }
 
 .contacts__adress {
   line-height: 18px;
+  color: var(--basic-gray);
 }
 
 .footer__slogan {
   font-weight: 700;
   font-size: 36px;
   line-height: 36px;
+  color: var(--basic-black);
+}
+
+.footer__text {
+  color: var(--basic-dark-gray);
 }
 
 .social-list {
