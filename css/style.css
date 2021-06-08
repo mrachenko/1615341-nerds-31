@@ -25,7 +25,6 @@
     url("../fonts/robotobold.woff") format("woff");
 }
 
-
 :root {
 
   --basic-extra-dark: #283136;
@@ -43,12 +42,6 @@
   --basic-yellow: #efc849;
   --dark-yellow: #eab534;
   --dark-dark-yellow: #e5a722;
-
-  --basic-dark: #aba9a7;
-  --basic-extra-light: #f8f5f2;
-
-
-  --special: #663d15;
 }
 
 body {
@@ -63,7 +56,10 @@ body {
   background-color: var(--basic-white);
 }
 
-p, h1, h2, h3 {
+p,
+h1,
+h2,
+h3 {
   margin: 0;
   padding: 0;
 }
@@ -96,9 +92,19 @@ img {
   list-style: none;
 }
 
+.site-nav a,
+.user-nav a {
+  opacity: 1;
+}
+
 .site-nav a:hover,
 .user-nav a:hover {
   color: var(--basic-red);
+}
+
+.site-nav a:active,
+.user-nav a:active {
+  opacity: 0.3;
 }
 
 .site-nav a:active,
@@ -113,6 +119,7 @@ img {
 .slide__header {
   font-size: 55px;
   line-height: 55px;
+  font-weight: 500;
   color: var(--basic-black);
 }
 
@@ -226,10 +233,12 @@ img {
   color: var(--basic-black);
 }
 
-.contacts__adress {
+.contacts__address,
+.contacts__tel {
   line-height: 18px;
   color: var(--basic-gray);
 }
+
 
 .footer__slogan {
   font-weight: 700;
