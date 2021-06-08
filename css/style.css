@@ -236,6 +236,7 @@ img {
 .contacts__address,
 .contacts__tel {
   line-height: 18px;
+  font-style: normal;
   color: var(--basic-gray);
 }
 
