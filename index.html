@@ -49,26 +49,30 @@
 
     <main class="page-main">
       <section class="slider">
-        <div class="slider__wrapper">
-          <h1 class="visually-hidden">Как работает дизайн-студия «Нёрдс»</h1>
-          <div class="slider__item slide">
-            <h2 class="slide__header">Долго, дорого, скрупулезно.</h2>
-            <p class="slide__description">Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
-            <a class="slide__button button button--red" href="#">Узнать больше</a>
-            <img src="img/slider/nerds-index-slide-1.png" width="760" height="431" alt="Делаем качественно">
+        <h1 class="visually-hidden">Как работает дизайн-студия «Нёрдс»</h1>
+        <div class="carousel">
+          <div class="slider__wrapper">
+            <div class="slider__item slide" id="slide1">
+              <h2 class="slide__header">Долго, дорого, скрупулезно.</h2>
+              <p class="slide__description">Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
+              <a class="slide__button button button--red button--big" href="#">Узнать больше</a>
+            </div>
+            <div class="slider__item slide" id="slide2">
+              <h2 class="slide__header">Любим математику как никто другой</h2>
+              <p class="slide__description">Никакого креатива, только математические формулы для расчета идеальных пропорций</p>
+              <a class="slide__button button button--red button--big" href="#">Узнать больше</a>
+            </div>
+            <div class="slider__item slide" id="slide3">
+              <h2 class="slide__header">Только ночь, только хардкор</h2>
+              <p class="slide__description">Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
+              <a class="slide__button button button--red button--big" href="#">Узнать больше</a>
+            </div>
           </div>
-          <div class="slider__item slide">
-            <h2 class="slide__header">Любим математику как никто другой</h2>
-            <p class="slide__description">Никакого креатива, только математические формулы для расчета идеальных пропорций</p>
-            <a class="slide__button button button--red" href="#">Узнать больше</a>
-            <img src="img/slider/nerds-index-slide-2.png" width="760" height="431" alt="Проектируем не как филологи">
-          </div>
-          <div class="slider__item slide">
-            <h2 class="slide__header">Только ночь, только хардкор</h2>
-            <p class="slide__description">Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
-            <a class="slide__button button button--red" href="#">Узнать больше</a>
-            <img src="img/slider/nerds-index-slide-3.png" width="760" height="431" alt="Не отвлекаемся на мелочи">
-          </div>
+        </div>
+        <div class="slider__control">
+          <a href="#slide1">Кнопка 1</a>
+          <a href="#slide2">Кнопка 2</a>
+          <a href="#slide3">Кнопка 3</a>
         </div>
       </section>
 
@@ -100,7 +104,8 @@
       </section>
 
       <section class="about">
-        <h2 class="about__header">Мы — маленькая, но гордая дизайн-студия из Краснодара.</h2>
+        <h2 class="visually-hidden">Фишки дизайн-студии «Нёрдс»</h2>
+        <p class="about__slogan">Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
         <p class="about__description">Исповедуем принципы минимализма и чистоты. Ставим математический расчетпревыше креатива. Работаем не покладая рук, как роботы.</p>
         <p class="about__description about__description--uppercase">Выполняем заказы на разработку:</p>
         <ul class="about__list list">
@@ -189,7 +194,7 @@
       <ul class="footer__social-list social-list">
         <li>
           <a class="social-list__link" href="#">
-            <img src="img/icons/vk-icon.svg" width="26" height="15" alt="Вконтакте">
+            <img src="img/icons/vk-icon.svg" alt="Вконтакте">
           </a>
         </li>
         <li>
@@ -220,9 +225,9 @@
           <label for="text">Текст письма:</label>
           <textarea class="form__textarea" id="text" name="text" placeholder="В свободной форме"></textarea>
         </p>
-        <button class="form__confirm-button" type="submit">Отправить</button>
+        <button class="form__submit button button--submit button--red" type="submit">Отправить</button>
       </form>
-      <button class="feedback__close-button" type="button">Закрыть</button>
+      <button class="feedback__close" type="button">Закрыть</button>
     </section>
 
   </body>

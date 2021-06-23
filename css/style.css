@@ -95,6 +95,7 @@ img {
 .site-nav a,
 .user-nav a {
   opacity: 1;
+  font-weight: 500;
 }
 
 .site-nav a:hover,
@@ -107,13 +108,19 @@ img {
   opacity: 0.3;
 }
 
-.site-nav a:active,
-.user-nav a:active {
-  opacity: 0.3;
+.site-nav__list-item--current {
+  border-bottom: 2px solid var(--basic-red);
 }
 
 .slider {
   background-color: var(--basic-neutral);
+}
+
+.carousel {
+  overflow: hidden;
+}
+.slider__wrapper {
+  width: 300%;
 }
 
 .slide__header {
@@ -123,6 +130,23 @@ img {
   color: var(--basic-black);
 }
 
+.slider__item {
+  float: left;
+  width: 1160px;
+  min-height: 431px;
+  background-image: url("../img/slider/nerds-index-slide-1.png");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.slider__item:nth-child(2){
+  background-image: url("../img/slider/nerds-index-slide-2.png");
+}
+
+.slider__item:nth-child(3){
+  background-image: url("../img/slider/nerds-index-slide-3.png");
+}
+
 .button {
   display: inline-block;
   font-weight: 500;
@@ -130,6 +154,16 @@ img {
   padding: 16px 40px;
   text-transform: uppercase;
   color: var(--basic-white);
+}
+
+.button--big {
+  padding-left: 54px;
+  padding-right: 54px;
+}
+
+.button--submit {
+  padding-left: 82px;
+  padding-right: 82px;
 }
 
 .button:active {
@@ -172,12 +206,6 @@ img {
   background-color: var(--dark-dark-green);
 }
 
-
-.slide__button {
-  padding-left: 54px;
-  padding-right: 54px;
-}
-
 .features__list {
   list-style: none;
 }
@@ -190,7 +218,7 @@ img {
   color: var(--basic-black);
 }
 
-.about__header {
+.about__slogan {
   font-size: 45px;
   line-height: 45px;
   font-weight: 500;
@@ -207,7 +235,11 @@ img {
   list-style: none;
 }
 
-.about__list-item span{
+.statistics {
+  list-style-type: none;
+}
+
+.statistics__item span{
   font-size: 45px;
   line-height: 64px;
   font-weight: 700;
@@ -230,6 +262,7 @@ img {
   font-weight: 700;
   font-size: 18px;
   line-height: 30px;
+  text-transform: uppercase;
   color: var(--basic-black);
 }
 
@@ -254,4 +287,18 @@ img {
 
 .social-list {
   list-style: none;
+}
+
+.social-list__link {
+  background: linear-gradient(0deg, #E1E1E1, #E1E1E1), #FFFFFF;
+}
+
+.feedback {
+  background: var(--basic-white);
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.form label {
+  font-weight: 700;
+  line-height: 18px;
 }
