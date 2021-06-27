@@ -402,7 +402,7 @@ img {
 }
 .filter legend {
   text-transform: uppercase;
-  font-style: 18px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 30px;
   color: var(--basic-black);
@@ -435,7 +435,7 @@ img {
 }
 
 .catalog__sort-title {
-  font-size: 18x;
+  font-size: 18px;
   text-transform: uppercase;
   line-height: 30px;
   font-weight: 700;
