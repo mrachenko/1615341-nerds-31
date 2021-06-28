@@ -49,6 +49,7 @@
   --button-30-percent-white: rgba(255,255,255,0.3);
   --button-30-percent-black: rgba(0, 0, 0, 0.3);
   --button-60-percent-black: rgba(0, 0, 0, 0.6);
+  --basic-outline: #dbdbdb;
 }
 
 body {
@@ -243,6 +244,7 @@ img {
   text-transform: uppercase;
   color: var(--basic-white);
   border: none;
+  border-radius: 3px;
   background-color: var(--basic-neutral);
 }
 
@@ -363,14 +365,15 @@ img {
 .about {
   display: grid;
   grid-template-columns: 2fr 1fr;
+  gap: 80px;
   padding-top: 39px;
   padding-bottom: 73px;
   border-bottom: 2px solid var(--basic-neutral);
 }
 
-
 .about__text {
   padding-top: 34px;
+  padding-right: 40px;
 }
 
 .about__advantages {
@@ -384,30 +387,66 @@ img {
   line-height: 45px;
   font-weight: 500;
   color: var(--basic-black);
+  margin-bottom: 32px;
 }
 
-.about__description--uppercase {
+.about__description {
+  margin-bottom: 40px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list__title {
   text-transform: uppercase;
   font-weight: 700;
   color: var(--basic-black);
+  margin-bottom: 23px;
 }
 
-.about__list {
-  list-style: none;
+.list__item {
+  padding-left: 32px;
+  margin-bottom: 25px;
+}
+
+.list__item:last-child {
+  margin-bottom: 0;
 }
 
 .statistics {
+  display: flex;
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-.statistics__item span{
+.statistics__item span {
   font-size: 45px;
   line-height: 64px;
   font-weight: 700;
   color: var(--basic-black);
 }
 
+.statistics__item span sup {
+  font-size: 26px;
+  line-height: 40px;
+  font-weight: 700;
+  color: var(--basic-black);
+  margin-left: -10px;
+}
+
+.partners {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-content: center;
+  justify-content: center;
+}
+
 .partners__link {
+  display: block;
   opacity: 0.2;
 }
 
@@ -421,9 +460,7 @@ img {
 
 .contacts {
   position: relative;
-  background-image: url(../img/map.png);
-  background-repeat: no-repeat;
-  background-position: center;
+  z-index: 0;
   padding: 54px 0;
 }
 
@@ -458,10 +495,11 @@ img {
   margin-bottom: 36px;
 }
 
-.contacts__map-marker {
+.contacts__map {
   position: absolute;
-  top: 70px;
-  left: 847px;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .footer__slogan {
@@ -605,20 +643,39 @@ img {
   display: flex;
 }
 
-.pagination__button {
-  color: var(--basic-black);
-}
-
-.pagination__button--number {
-  padding-left: 20px;
-  padding-right: 20px;
+.pagination__item {
+  display: inline-block;
+  font-weight: 500;
+  line-height: 18px;
+  text-transform: uppercase;
+  padding: 16px 20px;
   min-width: 10px;
+  color: var(--basic-black);
+  border: none;
+  background-color: var(--basic-neutral);
+  margin: 2px;
+  border-radius: 3px;
 }
 
-.pagination__button--next {
+.pagination__item:hover {
+  background-color: var(--basic-button-hover);
+}
+
+.pagination__item:active {
+  background-color: var(--basic-button-active);
+  color: var(--button-30-percent-black);
+}
+
+.pagination__item--next {
   padding-left: 78px;
   padding-right: 78px;
   min-width: 104px;
+}
+
+.pagination__item--active {
+  background-color: var(--basic-white);
+  outline: 3px solid var(--basic-outline);
+  outline-offset: -3px;
 }
 
 .catalog-item {
