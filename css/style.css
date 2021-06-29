@@ -53,7 +53,6 @@
 }
 
 body {
-  min-width: 960px;
   margin: 0;
   padding: 0;
   font-family: "Roboto", Arial, sans-serif;
@@ -110,7 +109,6 @@ img {
 .container {
   width: 1160px;
   margin: 0 auto;
-  padding: 0 10px;
   position: relative;
 }
 
@@ -178,7 +176,7 @@ img {
 }
 
 .slider {
-  min-width: 1440px;
+  min-width: 1160px;
   background-color: var(--basic-neutral);
 }
 
@@ -858,7 +856,7 @@ img {
   line-height: 18px;
   color: var(--basic-gray);
   text-align: center;
-  padding: 0 26px;
+  padding: 0 56px;
   margin-bottom: 32px;
 }
 
