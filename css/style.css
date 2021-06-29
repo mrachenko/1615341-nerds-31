@@ -398,7 +398,7 @@ img {
   margin: 0;
 }
 
-.list__title {
+.about__list-preview {
   text-transform: uppercase;
   font-weight: 700;
   color: var(--basic-black);
@@ -803,7 +803,7 @@ img {
   color: var(--button-30-percent-black);
 }
 
-.pagination__item--next {
+.pagination__item--text {
   padding-left: 78px;
   padding-right: 78px;
   min-width: 104px;
