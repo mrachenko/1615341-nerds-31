@@ -81,10 +81,15 @@ img {
 
 .visually-hidden {
   position: absolute;
-  clip: rect(0 0 0 0);
   width: 1px;
   height: 1px;
   margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .page {
@@ -123,7 +128,6 @@ img {
   display: grid;
   grid-template-columns: 1fr min-content;
   padding-top: 10px;
-
 }
 
 .page-header__logo {
@@ -140,34 +144,51 @@ img {
 
 .site-nav__list {
   display: flex;
-  width: 437px;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
   list-style: none;
   margin: 0 auto;
   padding: 0;
 }
 
-.user-nav {
-  display: flex;
-  align-items: center;
-  padding-left: 40px;
-  background: url("../img/icons/cart-icon.svg") 0px 25px no-repeat;
-}
 
 .site-nav a,
 .user-nav a {
+  display: block;
+  padding: 15px 20px;
   opacity: 1;
   font-weight: 500;
 }
 
-.site-nav a:hover,
-.user-nav a:hover {
+.user-nav {
+  display: flex;
+  align-items: center;
+}
+
+.user-nav .cart-link {
+  position: relative;
+  padding-left: 40px;
+}
+
+.cart-link::before {
+  content: "";
+  display: block;
+  background: url("../img/icons/cart-icon.svg") no-repeat;
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  top: 22px;
+  left: 0px;
+}
+
+.site-nav__list a:hover,
+.cart-link span:hover {
   color: var(--basic-red);
 }
 
-.site-nav a:active,
-.user-nav a:active {
+.site-nav__list a:active,
+.cart-link span:active {
   opacity: 0.3;
 }
 
