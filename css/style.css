@@ -52,6 +52,7 @@
   --button-60-percent-black: rgba(0, 0, 0, 0.6);
   --basic-outline: #dbdbdb;
   --basic-toggle: #ababab;
+  --carousel-button: #c1c1c1;
 }
 
 body {
@@ -214,23 +215,6 @@ img {
   background-color: var(--basic-neutral);
 }
 
-.slider__item {
-  display: none;
-}
-
-.slider__item--current {
-  display: block;
-}
-
-.carousel {
-  overflow: hidden;
-  padding: 0;
-}
-
-.slider__wrapper {
-  width: 300%;
-}
-
 .slide {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -254,7 +238,17 @@ img {
   margin-right: -50px;
 }
 
-.slider__item {
+.carousel {
+  overflow: hidden;
+  padding: 0;
+}
+
+.carousel__wrapper {
+  width: 300%;
+}
+
+.carousel__item {
+  display: none;
   float: left;
   width: 1160px;
   min-height: 431px;
@@ -263,15 +257,19 @@ img {
   background-position: right;
 }
 
-.slider__item:nth-child(2){
+.carousel__item--current {
+  display: grid;
+}
+
+.carousel__item:nth-child(2){
   background-image: url("../img/slider/nerds-index-slide-2.png");
 }
 
-.slider__item:nth-child(3){
+.carousel__item:nth-child(3){
   background-image: url("../img/slider/nerds-index-slide-3.png");
 }
 
-.slider__control {
+.carousel__control {
   position: absolute;
   top: 317px;
   left: 536px;
@@ -280,13 +278,25 @@ img {
   justify-content: space-between;
 }
 
-.slider__control a {
-  padding: 0;
-  width: 18px;
-  height: 18px;
-  border-radius: 9px;
+.carousel__button {
+  border: 5px solid var(--basic-white);
+  border-radius: 50%;
   cursor: pointer;
+}
+
+.carousel__button a {
+  display: block;
+  padding: 0;
+  width: 8px;
+  height: 8px;
   background-color: var(--basic-white);
+}
+
+.carousel__button--active a {
+  width: 4px;
+  height: 4px;
+  border: 2px solid var(--carousel-button);
+  border-radius: 50%;
 }
 
 .button {
@@ -745,7 +755,7 @@ img {
   background-color: var(--basic-toggle);
   border-radius: 50%;
   box-shadow: 0px 2px 1px var(--basic-toggle-shadow);
-  cursor: pointer;
+  cu
 }
 
 .cost-slider__toggle--min {
