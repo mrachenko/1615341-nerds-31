@@ -244,25 +244,25 @@
         </ul>
       </footer>
     </div>
-<!--
-    <section class="feedback">
-      <h2>Напишите нам</h2>
-      <form class="feedback__form form" action="https://echo.htmlacademy.ru" method="post">
-        <p>
-          <label for="name">Ваше имя:</label>
-          <input class="form__input" id="name" type="text" name="name" placeholder="Имя Фамилия">
-        </p>
-        <p>
-          <label for="email">Ваш email:</label>
-          <input class="form__input" id="email" type="email" name="email" placeholder="email@example.com">
-        </p>
-        <p>
-          <label for="text">Текст письма:</label>
-          <textarea class="form__textarea" id="text" name="text" placeholder="В свободной форме"></textarea>
-        </p>
-        <button class="form__submit button button--submit button--red" type="submit">Отправить</button>
+
+    <section class="feedback modal visually-hidden">
+      <p class="feedback__invite">Напишите нам</h2>
+      <form class="feedback__form" action="https://echo.htmlacademy.ru" method="post">
+        <label for="name">
+          <span>Ваше имя:</span>
+          <input id="name" type="text" name="name" placeholder="Имя Фамилия">
+        </label>
+        <label for="email">
+          <span>Ваш email:</span>
+          <input id="email" type="email" name="email" placeholder="email@example.com">
+        </label>
+        <label class="feedback__textarea" for="text">
+          <span>Текст письма:</span>
+          <textarea id="text" name="text" placeholder="В свободной форме"></textarea>
+        </label>
+        <button class="feedback__submit button button--submit button--red" type="submit">Отправить</button>
       </form>
-      <button class="feedback__close" type="button">Закрыть</button>
+      <button class="feedback__close" type="button" aria-label="Закрыть"></button>
     </section>
 -->
   </body>
