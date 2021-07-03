@@ -60,18 +60,27 @@
           <form class="filter__form" method="get" action="https://echo.htmlacademy.ru">
           <fieldset class="filter__cost">
             <legend>Стоимость:</legend>
-            <div class="filter__slider">
+            <div class="filter__cost-slider cost-slider">
               <label class="visually-hidden" for="cost">Цена</label>
-              <input type="range" id="cost" name="cost" min="0" max="15000">
+              <div class="cost-slider__scale">
+                <div class="cost-slider__bar"></div>
+              </div>
+              <div class="cost-slider__toggle cost-slider__toggle--min"></div>
+              <div class="cost-slider__toggle cost-slider__toggle--max"></div>
+              <!-- <input type="range" id="cost" name="cost" min="0" max="15000"> -->
             </div>
             <div class="filter__cost-selector">
               <div class="filter__cost-from">
-                <label for="from">От</label>
-                <input type="number" id="from" name="from" placeholder="0">
+                <label for="from">
+                  От
+                  <input type="number" id="from" name="from" value="0" tabindex="0">
+                </label>
               </div>
               <div class="filter__cost-to">
-                <label for="to">До</label>
-                <input type="number" id="to" name="to" placeholder="15000">
+                <label for="to">
+                  До
+                  <input type="number" id="to" name="to" value="15000" tabindex="0">
+                </label>
               </div>
             </div>
           </fieldset>
