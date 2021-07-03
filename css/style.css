@@ -149,9 +149,13 @@ img {
   justify-content: space-between;
   align-items: center;
   list-style: none;
-  width: 437px;
+  max-width: 880px;
   margin: 0 auto;
   padding: 0;
+}
+
+.site-nav__list li {
+  margin: 0 22px;
 }
 
 .site-nav__link {
@@ -424,10 +428,8 @@ img {
   padding-right: 40px;
 }
 
-.about__advantages {
-  background-image: url("../img/nerds-illustration-1.png");
-  background-repeat: no-repeat;
-  padding-top: 245px;
+.about__logo {
+  margin-bottom: 37px;
 }
 
 .about__slogan {
@@ -453,6 +455,10 @@ img {
   font-weight: 700;
   color: var(--basic-black);
   margin-bottom: 23px;
+}
+
+.about__list-preview--center {
+  text-align: center;
 }
 
 .about__list li {
@@ -657,10 +663,18 @@ img {
   color: var(--basic-black);
 }
 
-.filter {
+.shop__wrapper {
+  min-width: 1160px;
+  column-gap: 40px;
   display: grid;
-  grid-template-columns: 3fr 1fr;
-  min-width: 360px;
+  grid-template-columns: 1fr 2fr;
+  padding-top: 55px;
+}
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  max-width: 260px;
 }
 
 .filter fieldset {
@@ -757,22 +771,16 @@ img {
   padding-right: 88px;
 }
 
-.shop__wrapper {
-  min-width: 1160px;
-  column-gap: 40px;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  padding-top: 55px;
-}
-
 .catalog {
   min-width: 760px;
 }
 
 .catalog__sort-features {
   display: flex;
+  flex-wrap: wrap;
   min-width: 272px;
   justify-content: space-between;
+  align-items: center;
   padding: 0;
   margin: 0;
 }
@@ -785,7 +793,8 @@ img {
   color: var(--basic-black);
 }
 
-.catalog__sort-item {
+.catalog__sort-item,
+.catalog__direction-item {
   font-size: 14px;
   text-transform: uppercase;
   line-height: 18px;
@@ -806,10 +815,56 @@ img {
   color: var(--basic-black);
 }
 
+.catalog__sort-direction {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.catalog__sort-direction li {
+  width: 11px;
+  padding-right: 18px;
+}
+
+.catalog__direction-item:last-child {
+  padding: 0;
+}
+
+.catalog__sort-direction a {
+  position: relative;
+}
+
+.catalog__sort-direction a::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0px;
+  width: 11px;
+  height: 10px;
+  background-image: url(../img/icon-down-dir.svg);
+  opacity: 0.2;
+}
+
+.catalog__direction-item a:hover::after {
+  opacity: 1;
+}
+
+.catalog__direction-item a:active::after,
+.catalog__direction-item--active a::after {
+  background-image: url(../img/icon-down-dir-black.svg);
+  opacity: 1;
+}
+
+
+.catalog__sort-direction li:nth-child(2) {
+  transform: rotate(180deg);
+}
+
 .catalog {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 40px;
+  display: flex;
+  flex-direction: column;
 }
 
 .catalog__list {
@@ -826,6 +881,12 @@ img {
 .catalog__sorter {
   display: flex;
   justify-content: space-between;
+}
+
+.catalog__sort-parameters {
+  display: flex;
+  justify-content: space-between;
+  min-width: 360px;
 }
 
 .pagination {
