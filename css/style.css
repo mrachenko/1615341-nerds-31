@@ -1179,6 +1179,7 @@ img {
   background-image: url(../img/catalog/browser.svg);
   background-repeat: no-repeat;
   opacity: 0.12;
+  z-index: -1;
 }
 
 .catalog__item:hover::before {
@@ -1199,6 +1200,7 @@ img {
 
 .catalog-item__wrapper {
   visibility: hidden;
+  text-align: center;
   width: 100%;
   background-color: var(--basic-neutral);
   padding: 0;
@@ -1208,7 +1210,7 @@ img {
 }
 
 .catalog-item__wrapper--hover {
-  visibility:visible;
+  visibility: visible;
 }
 
 .catalog-item__header {
@@ -1229,6 +1231,3 @@ img {
   margin-bottom: 32px;
 }
 
-.catalog-item__button {
-  text-align: center;
-}
