@@ -966,8 +966,7 @@ img {
   opacity: 1;
 }
 
-.filter__grid label:disabled,
-.filter__properties label:disabled {
+.filter__input:disabled+label {
   opacity: 0.1;
 }
 
