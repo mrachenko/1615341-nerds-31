@@ -47,6 +47,7 @@
   --basic-button-hover: #dfdfdf;
   --basic-button-active: #d5d5d5;
   --input-border: #d7dcde;
+  --input-border-hover: #b4B9bb;
   --basic-toggle-shadow: rgba(0, 0, 0, 0.15);
   --basic-modal-shadow: rgba(0,0,0,0.4);
   --button-30-percent-white: rgba(255,255,255,0.3);
@@ -209,6 +210,7 @@ img {
 
 .site-nav__link:active,
 .cart-link span:active {
+  color: var(--basic-black);
   opacity: 0.3;
 }
 
@@ -620,15 +622,20 @@ img {
 .contacts iframe {
   position: absolute;
   top: 0;
-  left: 50%;
-  margin-left: -720px;
-  z-index: -1;
   min-width: 1440px;
   border: none;
 }
 
 .contacts__map {
   z-index: -2;
+  left: 50%;
+  margin-left: -720px;
+}
+
+.contacts iframe {
+  z-index: -1;
+  left: 0;
+  width: 100%;
 }
 
 .footer {
@@ -699,7 +706,7 @@ img {
   background-color:var(--dark-dark-red);
 }
 
-.social-list__link img:active {
+.social-list__link:active img {
   opacity: 0.3;
 }
 
@@ -756,6 +763,23 @@ img {
   min-height: 118px;
 }
 
+.feedback__form input:hover,
+.feedback__form textarea:hover {
+  border-color: var(--input-border-hover);
+}
+
+.feedback__form input:focus,
+.feedback__form textarea:focus {
+  border-color: var(--basic-black);
+  color: var(--basic-black);
+}
+
+.feedback__form input:invalid,
+.feedback__form textarea:invalid {
+  border-color: var(--dark-red);
+  color: var(--dark-red);
+}
+
 .feedback__textarea {
   min-width: 100%;
   grid-column: 1 / -1;
@@ -772,11 +796,21 @@ img {
   top: 78px;
   background-color: transparent;
   background-image: url(../img/icons/close.svg);
+  opacity: 0.3;
   height: 21px;
   width: 21px;
 }
 
+.feedback__close:hover {
+  opacity: 1;
+}
+
+.feedback__close:active {
+  opacity: 0.1;
+}
+
 .modal {
+  display: none;
   position: fixed;
   background: var(--basic-white);
   box-shadow: 0px 20px 40px var(--basic-modal-shadow);
@@ -785,6 +819,10 @@ img {
   top: 0;
   bottom: 0;
   margin: auto;
+}
+
+.modal--active {
+  display: flex;
 }
 
 
@@ -920,6 +958,17 @@ img {
 .filter__grid label,
 .filter__properties label {
   line-height: 20px;
+  opacity: 0.4;
+}
+
+.filter__grid label:hover,
+.filter__properties label:hover {
+  opacity: 1;
+}
+
+.filter__grid label:disabled,
+.filter__properties label:disabled {
+  opacity: 0.1;
 }
 
 .filter__grid legend,
@@ -1186,6 +1235,10 @@ img {
   opacity: 1;
 }
 
+.catalog__item:hover .catalog-item__wrapper {
+  visibility: visible;
+}
+
 .catalog-item__image {
   height: 578px;
   width: 358px;
@@ -1207,10 +1260,6 @@ img {
   margin: 0;
   padding-top: 25px;
   padding-bottom: 44px;
-}
-
-.catalog-item__wrapper--hover {
-  visibility: visible;
 }
 
 .catalog-item__header {
