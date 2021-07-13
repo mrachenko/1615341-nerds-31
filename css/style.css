@@ -221,7 +221,7 @@ img {
 
 .slide {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
 }
 
 .slide__text {
@@ -234,12 +234,12 @@ img {
   font-weight: 500;
   color: var(--basic-black);
   margin-bottom: 25px;
-  margin-right: -130px;
+  max-width: 520px;
 }
 
 .slide__description {
   margin-bottom: 40px;
-  margin-right: -50px;
+  max-width: 420px;
 }
 
 .carousel {
