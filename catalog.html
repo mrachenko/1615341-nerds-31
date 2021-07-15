@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/normalize.css" type="text/css"/>
-    <link rel="stylesheet" href="css/style.min.css" type="text/css"/>
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicon/180.png">
@@ -285,25 +285,6 @@
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d499.20449628191955!2d30.316833829223572!3d59.96834267006201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696315bc4e8ce61%3A0xe703c377f3424272!2sStudio%20212!5e0!3m2!1sru!2str!4v1626175068441!5m2!1sru!2str" width="1200" height="416" allowfullscreen="" loading="lazy"></iframe>
         <img class="contacts__map" src="img/map.png" width="1440" height="416" alt="наб. Реки Карповки, 5 лит П, Санкт-Петербург">
       </section>
-      <section class="feedback modal">
-        <h2 class="feedback__invite">Напишите нам</h2>
-        <form class="feedback__form" action="https://echo.htmlacademy.ru" method="post">
-          <label for="name">
-            <span>Ваше имя:</span>
-            <input id="name" type="text" name="name" placeholder="Имя Фамилия">
-          </label>
-          <label for="email">
-            <span>Ваш email:</span>
-            <input id="email" type="email" name="email" placeholder="email@example.com">
-          </label>
-          <label class="feedback__textarea" for="text">
-            <span>Текст письма:</span>
-            <textarea id="text" name="text" placeholder="В свободной форме"></textarea>
-          </label>
-          <button class="feedback__submit button button--submit button--red" type="submit">Отправить</button>
-        </form>
-        <button class="feedback__close" type="button" aria-label="Закрыть"></button>
-      </section>
     </main>
     <div class="container">
       <footer class="page__footer footer">
@@ -335,5 +316,25 @@
         </ul>
       </footer>
     </div>
+    <section class="feedback modal">
+      <h2 class="feedback__invite">Напишите нам</h2>
+      <form class="feedback__form" action="https://echo.htmlacademy.ru" method="post">
+        <label class="feedback__name" for="name">
+          <span>Ваше имя:</span>
+          <input id="name" type="text" name="name" placeholder="Имя Фамилия">
+        </label>
+        <label class="feedback__email" for="email">
+          <span>Ваш email:</span>
+          <input id="email" type="email" name="email" placeholder="email@example.com">
+        </label>
+        <label class="feedback__textarea" for="text">
+          <span>Текст письма:</span>
+          <textarea id="text" name="text" placeholder="В свободной форме"></textarea>
+        </label>
+        <button class="feedback__submit button button--submit button--red" type="submit">Отправить</button>
+      </form>
+      <button class="feedback__close" type="button" aria-label="Закрыть"></button>
+    </section>
+    <script src="js/scripts.js"></script>
   </body>
 </html>

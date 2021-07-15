@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/normalize.css" type="text/css"/>
-    <link rel="stylesheet" href="css/style.min.css" type="text/css"/>
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="favicon/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="favicon/180.png">
@@ -244,11 +244,11 @@
     <section class="feedback modal">
       <h2 class="feedback__invite">Напишите нам</h2>
       <form class="feedback__form" action="https://echo.htmlacademy.ru" method="post">
-        <label for="name">
+        <label class="feedback__name" for="name">
           <span>Ваше имя:</span>
           <input id="name" type="text" name="name" placeholder="Имя Фамилия">
         </label>
-        <label for="email">
+        <label class="feedback__email" for="email">
           <span>Ваш email:</span>
           <input id="email" type="email" name="email" placeholder="email@example.com">
         </label>
@@ -260,5 +260,6 @@
       </form>
       <button class="feedback__close" type="button" aria-label="Закрыть"></button>
     </section>
+    <script src="js/scripts.js"></script>
   </body>
 </html>
