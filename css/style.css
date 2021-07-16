@@ -297,6 +297,7 @@ img {
 }
 
 .carousel__button button {
+  cursor: pointer;
   display: block;
   padding: 0;
   width: 8px;

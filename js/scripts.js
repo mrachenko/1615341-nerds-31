@@ -5,6 +5,11 @@ const feedbackForm = feedbackPopup.querySelector(".feedback__form");
 const feedbackName = feedbackPopup.querySelector(".feedback__name");
 const feedbackEmail = feedbackPopup.querySelector(".feedback__email");
 
+const sliderContainer = document.querySelector(".slider");
+const carouselControl = document.querySelector(".carousel__control");
+const sliderButtons = carouselControl.querySelectorAll('.carousel__button');
+const sliderImages = sliderContainer.querySelectorAll('.carousel__item');
+
 let isStorageSupport = true;
 let storage = "";
 
@@ -14,7 +19,7 @@ try {
   isStorageSupport = false;
 }
 
-feedbackButton.addEventListener("click", function (evt) {
+feedbackButton.addEventListener("click", function(evt) {
   evt.preventDefault();
   feedbackPopup.classList.add("modal--active");
   if (storage) {
@@ -26,13 +31,13 @@ feedbackButton.addEventListener("click", function (evt) {
 });
 
 
-feedbackClose.addEventListener("click", function (evt) {
+feedbackClose.addEventListener("click", function(evt) {
   evt.preventDefault();
   feedbackPopup.classList.remove("modal--active");
   feedbackPopup.classList.remove("modal--error");
 });
 
-feedbackForm.addEventListener("submit", function (evt) {
+feedbackForm.addEventListener("submit", function(evt) {
   if (!feedbackName.value || !feedbackEmail.value) {
     evt.preventDefault();
     feedbackPopup.classList.remove("modal--error");
@@ -45,7 +50,7 @@ feedbackForm.addEventListener("submit", function (evt) {
   }
 });
 
-window.addEventListener("keydown", function (evt) {
+window.addEventListener("keydown", function(evt) {
   if (evt.keyCode === 27) {
     if (feedbackPopup.classList.contains("modal--active")) {
       evt.preventDefault();
@@ -54,3 +59,16 @@ window.addEventListener("keydown", function (evt) {
     }
   }
 });
+
+
+for (let i = 0; i < sliderButtons.length; i++) {
+  sliderButtons[i].addEventListener("click", function(evt) {
+    evt.preventDefault();
+    for (let j = 0; j < sliderButtons.length; j++) {
+      sliderImages[j].classList.remove("carousel__item--current");
+      sliderButtons[j].classList.remove("carousel__button--active");
+    }
+    sliderImages[i].classList.add("carousel__item--current");
+    sliderButtons[i].classList.add("carousel__button--active");
+  });
+}

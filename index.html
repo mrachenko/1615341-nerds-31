@@ -55,14 +55,14 @@
           <h1 class="visually-hidden">Как работает дизайн-студия «Нёрдс»</h1>
           <div class="carousel">
             <div class="carousel__wrapper">
-              <div class="carousel__item slide" id="slide1">
+              <div class="carousel__item slide carousel__item--current" id="slide1">
                 <div class="slide__text">
                   <h2 class="slide__header">Долго, дорого, скрупулезно.</h2>
                   <p class="slide__description">Математически выверенный дизайн <br> для вашего сайта или мобильного приложения.</p>
                   <a class="slide__button button button--red button--big" href="#">Узнать больше</a>
                 </div>
               </div>
-              <div class="carousel__item  slide carousel__item--current" id="slide2">
+              <div class="carousel__item slide" id="slide2">
                 <div class="slide__text">
                   <h2 class="slide__header">Любим математику как никто другой</h2>
                   <p class="slide__description">Никакого креатива, только математические формулы для расчета идеальных пропорций</p>
@@ -79,13 +79,13 @@
             </div>
           </div>
           <div class="carousel__control">
-            <div class="carousel__button carousel__button--active">
+            <div class="carousel__button carousel__button--active" data-id="slide1">
               <button aria-label="Слайд 1"></button>
             </div>
-            <div class="carousel__button">
+            <div class="carousel__button" data-id="slide2">
               <button aria-label="Слайд 2"></button>
             </div>
-            <div class="carousel__button">
+            <div class="carousel__button" data-id="slide3">
               <button aria-label="Слайд 3"></button>
             </div>
           </div>
@@ -260,6 +260,6 @@
       </form>
       <button class="feedback__close" type="button" aria-label="Закрыть"></button>
     </section>
-    <script src="js/scripts.js"></script>
+    <script src="js/scripts.min.js"></script>
   </body>
 </html>
