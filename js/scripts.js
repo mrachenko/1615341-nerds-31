@@ -55,9 +55,10 @@ window.addEventListener("keydown", function(evt) {
   }
 });
 
-if (document.querySelectorAll('.carousel__item')) {
-  let sliderImages = document.querySelectorAll('.carousel__item');
-  let sliderButtons = document.querySelectorAll('.carousel__button');
+const sliderImages = document.querySelectorAll('.carousel__item');
+const sliderButtons = document.querySelectorAll('.carousel__button');
+
+if (slderImages) {
   for (let i = 0; i < sliderButtons.length; i++) {
     sliderButtons[i].addEventListener("click", function(evt) {
       evt.preventDefault();
