@@ -5,11 +5,6 @@ const feedbackForm = feedbackPopup.querySelector(".feedback__form");
 const feedbackName = feedbackPopup.querySelector(".feedback__name");
 const feedbackEmail = feedbackPopup.querySelector(".feedback__email");
 
-const sliderContainer = document.querySelector(".slider");
-const carouselControl = document.querySelector(".carousel__control");
-const sliderButtons = carouselControl.querySelectorAll('.carousel__button');
-const sliderImages = sliderContainer.querySelectorAll('.carousel__item');
-
 let isStorageSupport = true;
 let storage = "";
 
@@ -60,15 +55,18 @@ window.addEventListener("keydown", function(evt) {
   }
 });
 
-
-for (let i = 0; i < sliderButtons.length; i++) {
-  sliderButtons[i].addEventListener("click", function(evt) {
-    evt.preventDefault();
-    for (let j = 0; j < sliderButtons.length; j++) {
-      sliderImages[j].classList.remove("carousel__item--current");
-      sliderButtons[j].classList.remove("carousel__button--active");
-    }
-    sliderImages[i].classList.add("carousel__item--current");
-    sliderButtons[i].classList.add("carousel__button--active");
-  });
+if (document.querySelectorAll('.carousel__item')) {
+  let sliderImages = document.querySelectorAll('.carousel__item');
+  let sliderButtons = document.querySelectorAll('.carousel__button');
+  for (let i = 0; i < sliderButtons.length; i++) {
+    sliderButtons[i].addEventListener("click", function(evt) {
+      evt.preventDefault();
+      for (let j = 0; j < sliderButtons.length; j++) {
+        sliderImages[j].classList.remove("carousel__item--current");
+        sliderButtons[j].classList.remove("carousel__button--active");
+      }
+      sliderImages[i].classList.add("carousel__item--current");
+      sliderButtons[i].classList.add("carousel__button--active");
+    });
+  }
 }
